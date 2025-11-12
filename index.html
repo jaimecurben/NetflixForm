@@ -1,0 +1,342 @@
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>NetflixForm</title>
+ </head>
+ <body>
+ <form action="/contactos" method="post">
+        <div class="row">
+          <legend>Datos Personales:</legend>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="nombre">Nombre</label>
+            <br>
+            <input type="text" id="nombre" placeholder="ej: Pedro" class="border-top-0 border-end-0 border-start-0">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="apellidos">Apellidos</label>
+            <br>
+            <input type="text" id="apellidos" placeholder="ej: Sánchez Paz" class="border-top-0 border-end-0 border-start-0
+            ">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="fechaNacimiento">Fecha de nacimiento</label>
+            <br>
+            <input type="date" id="fechaNacimiento" class="border-top-0 border-end-0 border-start-0">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="genero">Género</label>
+            <br>
+            <select name="genero" id="genero" class="border-top-0 border-end-0 border-start-0">
+              <option value="" disabled selected>Seleccione una opcion</option>
+              <option value="1">Masculino</option>
+              <option value="2">Femenino</option>
+              <option value="3">Prefiero no decirlo</option>
+            </select>
+          </div>
+
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="nacionalidad">Nacionalidad</label><br>
+            <input type="text" id=" nacionalidad" placeholder="ej: España"
+              class="border-top-0 border-end-0 border-start-0">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="estCivil">Esatdo Civil</label><br>
+            <select id="estCivil" class="border-top-0 border-end-0 border-start-0">
+              <option value="" disabled selected>Seleccione una opcion</option>
+              <option value="1">Casado/a</option>
+              <option value="2">Soltero/a</option>
+              <option value="3">Viudo/a</option>
+              <option value="4">Otro</option>
+            </select>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="identificacion">Tipo identificación</label>
+            <br>
+            <select id="identificacion" class="border-top-0 border-end-0 border-start-0">
+              <option value="" disabled selected>Seleccione una opcion</option>
+              <option value="1">DNI</option>
+              <option value="2">NIE</option>
+              <option value="3">Pasaporte</option>
+            </select>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="nIdentificacion">Número identificación</label> <br>
+            <input type="text" id="nIdentificacion" placeholder="ej: 70976349G"
+              class="border-top-0 border-end-0 border-start-0">
+          </div>
+
+
+
+        </div>
+
+        <hr>
+        <div class="row">
+          <legend>Datos de Contacto:</legend>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="movil">Teléfono móvil</label> <br>
+            <input type="number" id="movil" placeholder="ej: 680035718"
+              class="border-top-0 border-end-0 border-start-0">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="fijo">Teléfono fijo</label> <br>
+            <input type="number" id="fijo" placeholder="ej: 923758401" class="border-top-0 border-end-0 border-start-0">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="correo">Correo electrónico</label> <br>
+            <input type="email" id="correo" placeholder="ej: example@email.com"
+              class="border-top-0 border-end-0 border-start-0">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="linkedin"> Perfil de LinkedIn</label> <br>
+            <input type="url" id="linkedin" placeholder="ej: www.perfil.com"
+              class="border-top-0 border-end-0 border-start-0">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="twitter">Perfil de Twitter</label> <br>
+            <input type="url" id="twitter" placeholder="ej: www.perfil.com"
+              class="border-top-0 border-end-0 border-start-0">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="website">Sitio Web</label> <br>
+            <input type="url" id="website" placeholder="ej: www.web.com"
+              class="border-top-0 border-end-0 border-start-0">
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <legend>Dirección:</legend>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="tipoVia">Tipo vía</label> <br>
+            <select id="tipoVia" class="border-top-0 border-end-0 border-start-0">
+              <option value="" disabled selected>Selecciona una opcion</option>
+              <option value="1">Camino</option>
+              <option value="2">Carretera</option>
+              <option value="3">calle</option>
+              <option value="4">Otro</option>
+            </select>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="via">Vía</label> <br>
+            <input type="text" id="via" placeholder="ej: camino manzano"
+              class="border-top-0 border-end-0 border-start-0">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="numero">Número</label> <br>
+            <input type="number" id="numero" class="border-top-0 border-end-0 border-start-0">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="piso">Piso</label> <br>
+            <input type="text" id="piso" class="border-top-0 border-end-0 border-start-0">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="puerta">Puerta</label> <br>
+            <input type="text" id="puerta" class="border-top-0 border-end-0 border-start-0">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="vivienda">Tipo vivienda</label> <br>
+            <select id="vivienda" class="border-top-0 border-end-0 border-start-0">
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="1">Piso</option>
+              <option value="2">Casa</option>
+              <option value="3">Chalet</option>
+              <option value="4">Otro</option>
+            </select>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="cp">Código postal</label> <br>
+            <input type="number" id="cp" placeholder="ej: 37350" class="border-top-0 border-end-0 border-start-0">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="provincia">Provincia</label> <br>
+            <select id="provincia" name="provincia" class="border-top-0 border-end-0 border-start-0">
+              <option value="" disabled selected>Selecciona una provincia</option>
+              <option value="Álava">Álava</option>
+              <option value="Albacete">Albacete</option>
+              <option value="Alicante">Alicante</option>
+              <option value="Almería">Almería</option>
+              <option value="Asturias">Asturias</option>
+              <option value="Ávila">Ávila</option>
+              <option value="Badajoz">Badajoz</option>
+              <option value="Barcelona">Barcelona</option>
+              <option value="Burgos">Burgos</option>
+              <option value="Cáceres">Cáceres</option>
+              <option value="Cádiz">Cádiz</option>
+              <option value="Cantabria">Cantabria</option>
+              <option value="Castellón">Castellón</option>
+              <option value="Ciudad Real">Ciudad Real</option>
+              <option value="Córdoba">Córdoba</option>
+              <option value="Cuenca">Cuenca</option>
+              <option value="Girona">Girona</option>
+              <option value="Granada">Granada</option>
+              <option value="Guadalajara">Guadalajara</option>
+              <option value="Guipúzcoa">Guipúzcoa</option>
+              <option value="Huelva">Huelva</option>
+              <option value="Huesca">Huesca</option>
+              <option value="Illes Balears">Illes Balears</option>
+              <option value="Jaén">Jaén</option>
+              <option value="La Coruña">La Coruña</option>
+              <option value="La Rioja">La Rioja</option>
+              <option value="Las Palmas">Las Palmas</option>
+              <option value="León">León</option>
+              <option value="Lleida">Lleida</option>
+              <option value="Lugo">Lugo</option>
+              <option value="Madrid">Madrid</option>
+              <option value="Málaga">Málaga</option>
+              <option value="Murcia">Murcia</option>
+              <option value="Navarra">Navarra</option>
+              <option value="Ourense">Ourense</option>
+              <option value="Palencia">Palencia</option>
+              <option value="Pontevedra">Pontevedra</option>
+              <option value="Salamanca">Salamanca</option>
+              <option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
+              <option value="Segovia">Segovia</option>
+              <option value="Sevilla">Sevilla</option>
+              <option value="Soria">Soria</option>
+              <option value="Tarragona">Tarragona</option>
+              <option value="Teruel">Teruel</option>
+              <option value="Toledo">Toledo</option>
+              <option value="Valencia">Valencia</option>
+              <option value="Valladolid">Valladolid</option>
+              <option value="Vizcaya">Vizcaya</option>
+              <option value="Zamora">Zamora</option>
+              <option value="Zaragoza">Zaragoza</option>
+            </select>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="localidad">Localidad</label> <br>
+            <input type="text" id="localidad" placeholder="ej: Salamanca"
+              class="border-top-0 border-end-0 border-start-0">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="pais">País</label> <br>
+            <input type="text" id="pais" placeholder="ej: España" class="border-top-0 border-end-0 border-start-0">
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-12 col-md-4 col-lg-4 card" style="width: 18rem;">
+            <img src="images/2RD32WH6PZAVXMBD3DL66CHCFM.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Iphone 17</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
+                content.</p>
+              <a href="#" class="btn btn-primary">Ver más...</a>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-4 card" style="width: 18rem;">
+            <img src="images/ipad.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Ipad Pro</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
+                content.</p>
+              <a href="#" class="btn btn-primary">Ver más...</a>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-4 card" style="width: 18rem;">
+            <img src="images/450_1000.jpeg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">MacBoook Air</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
+                content.</p>
+              <a href="#" class="btn btn-primary">Ver más...</a>
+            </div>
+          </div>
+        </div>
+        <hr>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-4 col-lg-4 card" style="width: 18rem;">
+            <img src="images/no-robber-sign-forbidden-signs-260nw-2646073891.webp" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Anti-robo</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
+                content.</p>
+              <a href="#" class="btn btn-primary">Ver más...</a>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-4 card" style="width: 18rem;">
+            <img src="images/icloud-logo-png_seeklogo-494572.png" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Icloud</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
+                content.</p>
+              <a href="#" class="btn btn-primary">Ver más...</a>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-4 card" style="width: 18rem;">
+            <img src="images/61cbaUX-oiL.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Fundas</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
+                content.</p>
+              <a href="#" class="btn btn-primary">Ver más...</a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <legend>Método de pago:</legend>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="tipoPago">Tipo de pago</label><br>
+            <select id="tipoPago" class="border-top-0 border-end-0 border-start-0">
+              <option value="" disabled selected>Selecciona una opcion</option>
+              <option value="1">Transferencia bancaria</option>
+            </select>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="titular"></label> <br>
+            <input type="text" id="titular" placeholder="ej: Pedro Díaz Perez" class="border-top-0 border-end-0 border-start-0">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="fechaFin">Fecha de caducidad</label><br>
+            <input type="date" id="fechaFin">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="cvv">Código de seguridad</label> <br>
+            <input type="number" id="cvv" placeholder="ej: 910">
+          </div>
+
+        </div>
+        <div class="row">
+          <legend>Datos bancarios:</legend>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="banco">Nombre banco</label> <br>
+            <input type="text" id="banco" placeholder="ej: Santander" class="border-top-0 border-end-0 border-start-0">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="numCuenta">Número de cuenta</label> <br>
+            <input type="text" id="numcuenta" placeholder="ej: ES 3030 **** **** ****" class="border-top-0 border-end-0 border-start-0">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="swift">Swift/BIC</label> <br>
+            <input type="text"  id="swift" placeholder="ej: BSCH **** *** **" class="border-top-0 border-end-0 border-start-0">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="tipoCuenta">Tipo de cuenta</label><br>
+            <select  id="tipoCuenta" class="border-top-0 border-end-0 border-start-0">
+              <option value="" disabled selected>Seleccione una opcion</option>
+              <option value="1">Corriente</option>
+              <option value="2">Ahorro</option>
+              <option value="3">Otro</option>
+            </select>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <label for="sucursal">Sucursal</label> <br>
+            <input type="text" id="sucursal" placeholder="ej: Santander Salamanca" class="border-top-0 border-end-0 border-start-0">
+          </div>
+          <html></html>
+        </div>
+
+      </form>
+    </div>
+
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
