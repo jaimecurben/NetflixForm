@@ -7,6 +7,7 @@ body {
     min-height: 100vh;
 }
 
+
 body::before {
     content: "";
     position: absolute;
@@ -14,47 +15,129 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* negro semi-transparente */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* negro semi-transparente */
     z-index: 0;
 }
 
-.container, form {
+.container,
+form {
     position: relative;
-    z-index: 1; /* para que el contenido quede encima del velado */
+    z-index: 1;
+    /* para que el contenido quede encima del velado */
 }
 
 
 .select-blanco {
-  color: rgba(223, 221, 221, 0.737); /* texto del select visible */
-  background-color: rgba(0,0,0,0.5);  /* fondo translúcido */
-  opacity: 0.5;                        /* opacidad corregida */
-  border: solid 2px;
+    color: rgba(223, 221, 221, 0.737);
+    /* texto del select visible */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* fondo translúcido */
+    opacity: 0.5;
+    /* opacidad corregida */
+    border: solid 2px;
 }
 
 /* Para mantener estilo del placeholder */
 .select-blanco option:disabled {
-  color: #dfdddd;
+    color: #dfdddd;
 }
 
 .input-placeholder-blanco::placeholder {
-  color: #dfdddd;
-  opacity: 1;
+    color: #dfdddd;
+    opacity: 1;
 }
 
-@media (min-width: 0px) and (max-width: 767.98px) { 
+.carta {
+    background-color: rgba(56, 56, 56, 0.5);
+    /* negro semi-transparente */
+    border: solid 1px white;
+    width: 40vw;
+    height: 70vh;
+
+}
+
+.boton {
+    background-color: #0071e3;
+
+    min-width: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 980px;
+    font-family: "SF Pro Text", sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1.4289;
+    font-weight: 400;
+    letter-spacing: -.016em;
+    font-family: "SF Pro Text", sans-serif;
+    padding-top: 5px;
+
+
+}
+
+@media (min-width: 0px) and (max-width: 767.98px) {
     .centrado {
         text-align: center;
     }
-}
 
-@media (min-width: 768px) { 
-    body {
-        background-image: url(../images/fondo.png);
+    .carta {
+        background-color: rgba(56, 56, 56, 0.5);
+        /* negro semi-transparente */
+        border: solid 1px white;
+        width: 80vw;
+        height: 90vh;
+
     }
 }
 
-@media (min-width: 992px) { }
+@media (min-width: 768px) {
+    body {
+        background-image: url(../images/fondo.png);
+    }
+    .boton {
+    background-color: #0071e3;
 
-@media (min-width: 1200px) { }
+    min-width: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 980px;
+    font-family: "SF Pro Text", sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.4289;
+    font-weight: 400;
+    letter-spacing: -.016em;
+    font-family: "SF Pro Text", sans-serif;
+    padding-top: 5px;
 
-@media (min-width: 1400px) { }
+
+}
+.carta {
+    background-color: rgba(56, 56, 56, 0.5);
+    /* negro semi-transparente */
+    border: solid 1px white;
+    width: 40vw;
+    height: 90vh;
+
+}
+}
+
+@media (min-width: 992px) {
+    .carta {
+    background-color: rgba(56, 56, 56, 0.5);
+    /* negro semi-transparente */
+    border: solid 1px white;
+    width: 40vw;
+    height: 70vh;
+
+}
+}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1400px) {}
