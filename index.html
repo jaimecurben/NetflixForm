@@ -2,89 +2,88 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/index.css">
-    <title>NetflixForm</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/index.css">
+  <title>NetflixForm</title>
 </head>
 
 <body class="bg-black ">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-10">
+        <form action="/contactos" method="post" class=" my-5 bg-black p-4 rounded-5 bg-opacity-75">
+          <legend class="centrado mb-4 text-light titulo">Iniciar Sesion</legend>
+          <legend class="text-light centrado fw-bold">Datos Personales</legend>
 
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-sm-12 col-md-8">
-                <form action="/contactos" method="post" class=" my-5 bg-black p-4 rounded-5 bg-opacity-75">
-                    <legend class="centrado mb-4 text-light ">Iniciar Sesion</legend>
+          <div class="row g-3">
+            <div class="col-sm-12 col-md-6 ">
+              <label for="nombre" class="form-label"></label>
+              <input type="text" id="nombre" placeholder="Nombre" required
+                class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
+            </div>
 
-                    <legend class="text-light centrado">Datos Personales</legend>
+            <div class="col-sm-12 col-md-6">
+              <label for="apellidos" class="form-label"></label>
+              <input type="text" id="apellidos" required placeholder="Apellidos"
+                class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
+            </div>
 
-                    <div class="row g-3">
-                        <div class="col-sm-12 col-md-6 ">
-                            <label for="nombre" class="form-label"></label>
-                            <input type="text" id="nombre" placeholder="Nombre" required
-                                class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
-                        </div>
+            <div class="col-sm-12 col-md-6">
+              <label for="fechaNacimiento" class="form-label"></label>
+              <input type="text" required placeholder="Fecha de nacimiento" id="fechaNacimiento"
+                class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
+            </div>
 
-                        <div class="col-sm-12 col-md-6">
-                            <label for="apellidos" class="form-label"></label>
-                            <input type="text" id="apellidos" required placeholder="Apellidos"
-                                class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
-                        </div>
-
-                        <div class="col-sm-12 col-md-6">
-                            <label for="fechaNacimiento" class="form-label"></label>
-                            <input type="text" required placeholder="Fecha de nacimiento" id="fechaNacimiento"
-                                class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
-                        </div>
-
-                        <div class="col-sm-12 col-md-6">
-                            <label for="genero" class="form-label"></label>
-                            <select id="genero" required
-                                class="form-control rounded-0 bg-black bg-opacity-50 select-blanco fw-bold text-light">
-                                <option disabled selected>Género</option>
-                                <option>Masculino</option>
-                                <option>Femenino</option>
-                            </select>
-                        </div>
+            <div class="col-sm-12 col-md-6">
+              <label for="genero" class="form-label"></label>
+              <select id="genero" required
+                class="form-control rounded-0 bg-black bg-opacity-50 select-blanco fw-bold text-light">
+                <option disabled selected>Género</option>
+                <option>Masculino</option>
+                <option>Femenino</option>
+              </select>
+            </div>
 
 
-                        <div class="col-sm-12 col-md-6">
-                            <label for="nacionalidad" class="form-label"></label>
-                            <input type="text" required id="nacionalidad" placeholder="Nacionalidad"
-                                class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
-                        </div>
+            <div class="col-sm-12 col-md-6">
+              <label for="nacionalidad" class="form-label"></label>
+              <input type="text" required id="nacionalidad" placeholder="Nacionalidad"
+                class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
+            </div>
 
-                        <div class="col-sm-12 col-md-6">
-                            <label for="identificacion" class="form-label"></label>
-                            <select id="identificacion" required
-                                class="form-control bg-black rounded-0 bg-opacity-50 placeholder select-blanco fw-bold text-light">
-                                <option disabled selected>Tipo de identificación</option>
-                                <option>DNI</option>
-                                <option>NIE</option>
-                                <option>Pasaporte</option>
-                            </select>
-                        </div>
+            <div class="col-sm-12 col-md-6">
+              <label for="identificacion" class="form-label"></label>
+              <select id="identificacion" required
+                class="form-control bg-black rounded-0 bg-opacity-50 placeholder select-blanco fw-bold text-light">
+                <option disabled selected>Tipo de identificación</option>
+                <option>DNI</option>
+                <option>NIE</option>
+                <option>Pasaporte</option>
+              </select>
+            </div>
 
-                        <div class="col-sm-12 col-md-6">
-                            <label for="nIdentificacion" class="form-label"></label>
-                            <input type="text" required id="nIdentificacion" placeholder="Número de identificación"
-                                class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
-                        </div>
-                        <div class="col-sm-12 col-md-6">
-                            <label for="estCivil" class="form-label"></label>
-                            <select id="estCivil" required
-                                class="form-control bg-black rounded-0 bg-opacity-50 placeholder select-blanco fw-bold text-light">
-                                <option disabled selected>Estado civil</option>
-                                <option>Casado/a</option>
-                                <option>Soltero/a</option>
-                                <option>Viudo/a</option>
-                                <option>Otro</option>
-                            </select>
-                        </div>
-                    </div>
+            <div class="col-sm-12 col-md-6">
+              <label for="nIdentificacion" class="form-label"></label>
+              <input type="text" required id="nIdentificacion" placeholder="Número de identificación"
+                class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <label for="estCivil" class="form-label"></label>
+              <select id="estCivil" required
+                class="form-control bg-black rounded-0 bg-opacity-50 placeholder select-blanco fw-bold text-light">
+                <option disabled selected>Estado civil</option>
+                <option>Casado/a</option>
+                <option>Soltero/a</option>
+                <option>Viudo/a</option>
+                <option>Otro</option>
+              </select>
+            </div>
+          </div>
 
-                    <legend class="text-light centrado">Datos de contacto</legend>
+
+          <legend class="text-light centrado fw-bold">Datos de contacto</legend>
 
           <div class="row g-3">
             <div class="col-sm-12 col-md-6 ">
@@ -130,20 +129,137 @@
                 class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
             </div>
           </div>
-                </form>
+          <legend class="text-light fw-bold centrado">Direccion</legend>
+          <div class="row g-3">
+            <div class="col-9 col-md-3 col-lg-4">
+              <label for="tipovia" class="form-label"></label>
+              <select id="tipovia" required
+                class="form-control rounded-0 bg-black bg-opacity-50 select-blanco fw-bold text-light">
+                <option disabled selected>tipo de via</option>
+                <option>calle</option>
+                <option>avenida</option>
+                <option>plaza</option>
+                <option>carretera</option>
+              </select>
             </div>
-        </div>
+            <div class="col-12 col-md-5 col-lg-8 ">
+              <label for="via" class="form-label"></label>
+              <input type="text" id="via" placeholder="Via" required
+                class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
+            </div>
+            <div class="col-6 col-md-2 col-lg-4">
+              <label for="Numero" class="form-label"></label>
+              <input type="number" required placeholder="Numero" id="Numero"
+                class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
+            </div>
+            <div class="col-10 col-md-2 col-lg-8">
+              <label for="piso" class="form-label"></label>
+              <input type="text" id="piso" required placeholder="Piso"
+                class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
+            </div>
+
+
+            <div class="col-12 col-md-3 col-lg-4">
+              <label for="puerta" class="form-label"></label>
+              <input type="text" required placeholder="Puerta" id="puerta"
+                class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
+            </div>
+
+            <div class="col-12 col-md-5 col-lg-4">
+              <label for="tipovivienda" class="form-label"></label>
+              <select id="tipovivienda" required
+                class="form-control bg-black rounded-0 bg-opacity-50 placeholder select-blanco fw-bold text-light">
+                <option disabled selected>Tipo de vivienda</option>
+                <option>casa</option>
+                <option>chalet</option>
+                <option>piso</option>
+              </select>
+            </div>
+
+            <div class="col-5 col-md-4 col-lg-4">
+              <label for="codigoPostal" class="form-label"></label>
+              <input type="text" required placeholder="Codigo Postal" id="codigoPostal"
+                class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
+            </div>
+
+            <div class="col-6 d-none d-sm-block d-md-none d-lg-none"></div>
+
+            <div class="col-6 col-md-4 col-lg-4">
+              <label for="provincia" class="form-label"></label>
+              <select id="provincia" required
+                class="form-control bg-black rounded-0 bg-opacity-50 placeholder select-blanco fw-bold text-light">
+                <option disabled selected>Provincia</option>
+                <option value="Álava">Álava</option>
+                <option value="Albacete">Albacete</option>
+                <option value="Alicante">Alicante</option>
+                <option value="Almería">Almería</option>
+                <option value="Asturias">Asturias</option>
+                <option value="Ávila">Ávila</option>
+                <option value="Badajoz">Badajoz</option>
+                <option value="Barcelona">Barcelona</option>
+                <option value="Burgos">Burgos</option>
+                <option value="Cáceres">Cáceres</option>
+                <option value="Cádiz">Cádiz</option>
+                <option value="Cantabria">Cantabria</option>
+                <option value="Castellón">Castellón</option>
+                <option value="Ciudad Real">Ciudad Real</option>
+                <option value="Córdoba">Córdoba</option>
+                <option value="Cuenca">Cuenca</option>
+                <option value="Girona">Girona</option>
+                <option value="Granada">Granada</option>
+                <option value="Guadalajara">Guadalajara</option>
+                <option value="Guipúzcoa">Guipúzcoa</option>
+                <option value="Huelva">Huelva</option>
+                <option value="Huesca">Huesca</option>
+                <option value="Illes Balears">Illes Balears</option>
+                <option value="Jaén">Jaén</option>
+                <option value="La Coruña">La Coruña</option>
+                <option value="La Rioja">La Rioja</option>
+                <option value="Las Palmas">Las Palmas</option>
+                <option value="León">León</option>
+                <option value="Lleida">Lleida</option>
+                <option value="Lugo">Lugo</option>
+                <option value="Madrid">Madrid</option>
+                <option value="Málaga">Málaga</option>
+                <option value="Murcia">Murcia</option>
+                <option value="Navarra">Navarra</option>
+                <option value="Ourense">Ourense</option>
+                <option value="Palencia">Palencia</option>
+                <option value="Pontevedra">Pontevedra</option>
+                <option value="Salamanca">Salamanca</option>
+                <option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
+                <option value="Segovia">Segovia</option>
+                <option value="Sevilla">Sevilla</option>
+                <option value="Soria">Soria</option>
+                <option value="Tarragona">Tarragona</option>
+                <option value="Teruel">Teruel</option>
+                <option value="Toledo">Toledo</option>
+                <option value="Valencia">Valencia</option>
+                <option value="Valladolid">Valladolid</option>
+                <option value="Vizcaya">Vizcaya</option>
+                <option value="Zamora">Zamora</option>
+                <option value="Zaragoza">Zaragoza</option>
+              </select>
+            </div>
+            <div class="col-6 d-none d-sm-block d-md-none d-lg-none"></div>
+
+            <div class="col-6 col-md-4 col-lg-4">
+              <label for="localidad" class="form-label"></label>
+              <input type="text" required placeholder="Localidad" id="localidad"
+                class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
+            </div>
+            <br>
+            <div class="col-12 col-md-4 col-lg-4">
+              <label for="pais" class="form-label"></label>
+              <input type="text" required placeholder="Pais" id="pais"
+                class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
+            </div>
+        </form>
+      </div>
     </div>
+  </div>
 
 </body>
-<hr>
-</form>
-</div>
-
-</footer>
-
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
 
 </html>
