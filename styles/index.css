@@ -29,7 +29,6 @@ body::before {
 .boton {
     background-color: #FFFFFF;
     min-width: 30px;
-    padding-left: 15px;
     padding-right: 15px;
     padding-top: 7px;
     padding-bottom: 7px;
@@ -42,16 +41,11 @@ body::before {
     letter-spacing: -.016em;
     font-family: "SF Pro Text", sans-serif;
     padding-top: 5px;
-    margin-left: 40px;
-
 
 }
-.alejar{
-    margin-left: 100px;
-}
+
 .imagenesprod{
     width: 200px;
-    margin-left: 20px;
 }
 .select-blanco {
   color: rgba(223, 221, 221, 0.737); /* texto del select visible */
@@ -59,7 +53,11 @@ body::before {
   opacity: 0.5;                        /* opacidad corregida */
   border: solid 2px;
 }
+.carta {
+    background-color: rgba(56, 56, 56, 0.5);
+    border: solid 1px white;
 
+}
 .select-blanco option:disabled {
   color: #dfdddd;
 }
@@ -85,9 +83,17 @@ body::before {
     }
     .imagenesprod{
     width: 180px;
-    margin-left: 20px;
 }
+.carta {
+        background-color: rgba(56, 56, 56, 0.5);
+        /* negro semi-transparente */
+        border: solid 1px white;
 
+    }
+
+.espacio{
+    padding: 2rem;
+}
 }
 
 @media (min-width: 768px) { 
