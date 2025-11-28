@@ -6,6 +6,13 @@ body {
     background-repeat: no-repeat;
     min-height: 100vh;
 }
+.has-error input,
+.has-error select,
+.has-error textarea {
+    border: 2px solid #e74c3c !important;
+    background-color: #fceaea;
+    border-radius: 4px;
+}
 
 body::before {
     content: "";

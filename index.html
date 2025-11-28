@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles/index.css">
+  <script src="js/index.js"></script>
   <title>NetflixForm</title>
 </head>
 
@@ -20,82 +21,88 @@
           <div class="row g-3">
             <div class="col-sm-12 col-md-6 ">
               <label for="nombre" class="form-label"></label>
-              <input type="text" id="nombre" placeholder="Nombre" required
+              <input type="text" id="nombre" placeholder="Nombre" 
                 class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
             </div>
 
             <div class="col-sm-12 col-md-6">
               <label for="apellidos" class="form-label"></label>
-              <input type="text" id="apellidos" required placeholder="Apellidos"
+              <input type="text" id="apellidos"  placeholder="Apellidos"
                 class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
             </div>
 
             <div class="col-sm-12 col-md-6">
               <label for="fechaNacimiento" class="form-label"></label>
-              <input type="text" required placeholder="Fecha de nacimiento" id="fechaNacimiento"
+              <input type="text"  placeholder="Fecha de nacimiento" id="fechaNacimiento"
                 class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
             </div>
 
             <div class="col-sm-12 col-md-6">
               <label for="genero" class="form-label"></label>
-              <select id="genero" required
+              <select id="genero" 
                 class="form-control rounded-0 bg-black bg-opacity-50 select-blanco fw-bold text-light">
-                <option disabled selected>Género</option>
-                <option>Masculino</option>
-                <option>Femenino</option>
+                <option disabled selected value="0">Género</option>
+                <option value="1">Masculino</option>
+                <option value="2">Femenino</option>
               </select>
             </div>
 
 
             <div class="col-sm-12 col-md-6">
               <label for="nacionalidad" class="form-label"></label>
-              <input type="text" required id="nacionalidad" placeholder="Nacionalidad"
+              <input type="text" id="nacionalidad" placeholder="Nacionalidad"
                 class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
             </div>
 
             <div class="col-sm-12 col-md-6">
               <label for="identificacion" class="form-label"></label>
-              <select id="identificacion" required
+              <select id="identificacion" 
                 class="form-control bg-black rounded-0 bg-opacity-50 placeholder select-blanco fw-bold text-light">
-                <option disabled selected>Tipo de identificación</option>
-                <option>DNI</option>
-                <option>NIE</option>
-                <option>Pasaporte</option>
+                <option disabled selected value="0">Tipo de identificación</option>
+                <option value="1">DNI</option>
+                <option value="2">NIE</option>
+                <option value="3">Pasaporte</option>
               </select>
             </div>
 
             <div class="col-sm-12 col-md-6">
               <label for="nIdentificacion" class="form-label"></label>
-              <input type="text" required id="nIdentificacion" placeholder="Número de identificación"
+              <input type="text" id="nIdentificacion" placeholder="Número de identificación"
                 class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
             </div>
             <div class="col-sm-12 col-md-6">
               <label for="estCivil" class="form-label"></label>
-              <select id="estCivil" required
+              <select id="estCivil" 
                 class="form-control bg-black rounded-0 bg-opacity-50 placeholder select-blanco fw-bold text-light">
-                <option disabled selected>Estado civil</option>
-                <option>Casado/a</option>
-                <option>Soltero/a</option>
-                <option>Viudo/a</option>
-                <option>Otro</option>
+                <option disabled selected value="0">Estado civil</option>
+                <option value="1">Casado/a</option>
+                <option value="2">Soltero/a</option>
+                <option value="3">Viudo/a</option>
+                <option value="4">Otro</option>
               </select>
             </div>
           </div>
+              <div class="row">
+              <div class="col">
+                <button type="button" id="btn-enviar" onclick="validarForm()">enviar</button>
 
+              </div>
+
+            </div>
 
           <legend class="text-light centrado fw-bold">Datos de contacto</legend>
 
           <div class="row g-3">
             <div class="col-sm-12 col-md-6 ">
               <label for="tlfmovil" class="form-label"></label>
-              <input type="text" id="telefono" maxlength="9" inputmode="numeric" placeholder="Teléfono móvil"
+              <input type="text" id="tlfmovil" maxlength="9" inputmode="numeric" placeholder="Teléfono móvil"
                 oninput="this.value = this.value.replace(/[^0-9]/g, '')"
                 class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
             </div>
 
             <div class="col-sm-12 col-md-6">
               <label for="tlffijo" class="form-label"></label>
-              <input type="text" id="telefono" maxlength="9" inputmode="numeric" placeholder="Teléfono móvil"
+              <input type="text" id="tlffijo" maxlength="9" inputmode="numeric" placeholder="Teléfono móvil"
                 oninput="this.value = this.value.replace(/[^0-9]/g, '')"
                 class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
 
@@ -103,7 +110,7 @@
 
             <div class="col-sm-12 col-md-12">
               <label for="email" class="form-label"></label>
-              <input type="email" required placeholder="Correo electrónico" id="email"
+              <input type="email"  placeholder="Correo electrónico" id="email"
                 class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
             </div>
 
@@ -125,7 +132,7 @@
             </div>
             <div class="col-sm-12 col-md-4">
               <label for="web" class="form-label"></label>
-              <input type="url" id="url" placeholder="Sitio web personal"
+              <input type="text" id="web" placeholder="Sitio web personal"
                 class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
             </div>
           </div>
@@ -133,7 +140,7 @@
           <div class="row g-3">
             <div class="col-9 col-md-3 col-lg-4">
               <label for="tipovia" class="form-label"></label>
-              <select id="tipovia" required
+              <select id="tipovia" 
                 class="form-control rounded-0 bg-black bg-opacity-50 select-blanco fw-bold text-light">
                 <option disabled selected>tipo de via</option>
                 <option>calle</option>
@@ -144,30 +151,30 @@
             </div>
             <div class="col-12 col-md-5 col-lg-8 ">
               <label for="via" class="form-label"></label>
-              <input type="text" id="via" placeholder="Via" required
+              <input type="text" id="via" placeholder="Via" 
                 class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
             </div>
             <div class="col-6 col-md-2 col-lg-4">
               <label for="Numero" class="form-label"></label>
-              <input type="number" required placeholder="Numero" id="Numero"
+              <input type="number"  placeholder="Numero" id="Numero"
                 class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
             </div>
             <div class="col-10 col-md-2 col-lg-8">
               <label for="piso" class="form-label"></label>
-              <input type="text" id="piso" required placeholder="Piso"
+              <input type="text" id="piso"  placeholder="Piso"
                 class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
             </div>
 
 
             <div class="col-12 col-md-3 col-lg-4">
               <label for="puerta" class="form-label"></label>
-              <input type="text" required placeholder="Puerta" id="puerta"
+              <input type="text"  placeholder="Puerta" id="puerta"
                 class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
             </div>
 
             <div class="col-12 col-md-5 col-lg-4">
               <label for="tipovivienda" class="form-label"></label>
-              <select id="tipovivienda" required
+              <select id="tipovivienda" 
                 class="form-control bg-black rounded-0 bg-opacity-50 placeholder select-blanco fw-bold text-light">
                 <option disabled selected>Tipo de vivienda</option>
                 <option>casa</option>
@@ -178,7 +185,7 @@
 
             <div class="col-5 col-md-4 col-lg-4">
               <label for="codigoPostal" class="form-label"></label>
-              <input type="text" required placeholder="Codigo Postal" id="codigoPostal"
+              <input type="text"  placeholder="Codigo Postal" id="codigoPostal"
                 class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
             </div>
 
@@ -186,7 +193,7 @@
 
             <div class="col-6 col-md-4 col-lg-4">
               <label for="provincia" class="form-label"></label>
-              <select id="provincia" required
+              <select id="provincia" 
                 class="form-control bg-black rounded-0 bg-opacity-50 placeholder select-blanco fw-bold text-light">
                 <option disabled selected>Provincia</option>
                 <option value="Álava">Álava</option>
@@ -245,13 +252,13 @@
 
             <div class="col-6 col-md-4 col-lg-4">
               <label for="localidad" class="form-label"></label>
-              <input type="text" required placeholder="Localidad" id="localidad"
+              <input type="text"  placeholder="Localidad" id="localidad"
                 class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
             </div>
             <br>
             <div class="col-12 col-md-4 col-lg-4">
               <label for="pais" class="form-label"></label>
-              <input type="text" required placeholder="Pais" id="pais"
+              <input type="text"  placeholder="Pais" id="pais"
                 class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
             </div>
           </div>
@@ -361,7 +368,7 @@
             <div class="row">
               <div class="col-sm-12 col-md-12 col-lg-4 centrado2">
                 <img src="images/padrenohaymasqueuno.jpg" class="card-img-top imagenesprod mb-4 abajo" alt="Pelicula 1"><br>
-                <button class="  boton abajo ">Alquilar</button>
+                <button class="  boton abajo ">  Alquilar</button>
 
               </div>
               <div class="col-sm-12 col-md-12 col-lg-4 centrado2">
@@ -381,7 +388,7 @@
                 <legend class="text-light centrado fw-bold">Metodo de pago</legend>
                 <div class="col-sm-12 col-md-12 col-lg-12">
                   <label for="tipoPago" class="form-label"></label>
-                  <select id="tipoPago" required
+                  <select id="tipoPago" 
                     class="form-control rounded-0 bg-black bg-opacity-50 select-blanco fw-bold text-light">
                     <option disabled selected>Tipo de pago</option>
                     <option>Transferencia</option>
@@ -390,19 +397,19 @@
 
                 <div class="col-sm-12 col-md-12 col-lg-12">
                   <label for="nombretitular" class="form-label"></label>
-                  <input type="text" id="nombretitular" placeholder="Nombre del titular" required
+                  <input type="text" id="nombretitular" placeholder="Nombre del titular" 
                     class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
                 </div>
 
                 <div class="col-8 col-md-8 col-lg-7">
                   <label for="fecha" class="form-label"></label>
-                  <input type="date" id="fecha" placeholder="Fecha de caducidad" required
+                  <input type="date" id="fecha" placeholder="Fecha de caducidad" 
                     class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
                 </div>
 
                 <div class="col-sm-5 col-md-4 col-lg-5">
                   <label for="codigocvv" class="form-label"></label>
-                  <input type="number" id="codigocvv" placeholder="Codigo de caducidad (CVV)" required
+                  <input type="number" id="codigocvv" placeholder="Codigo de caducidad (CVV)" 
                     class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
                 </div>
 
@@ -412,25 +419,25 @@
                 <legend class="text-light centrado fw-bold">Datos bancarios</legend>
                 <div class="col-sm-12 col-md-12 col-lg-12">
                   <label for="nombreBanco" class="form-label"></label>
-                  <input type="text" id="nombreBanco" placeholder="Nombre del banco" required
+                  <input type="text" id="nombreBanco" placeholder="Nombre del banco" 
                     class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-12 mt-2">
                   <label class="form-label text-light">Número de cuenta (IBAN)</label>
                   <div class="d-flex flex-wrap gap-1 align-items-center col-sm-12">
-                    <input type="text" name="iban1" maxlength="4" placeholder="ESXX" required
+                    <input type="text" name="iban1" maxlength="4" placeholder="ESXX" 
                       class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light"
                       style="width: 80px; text-align:center;">
-                    <input type="text" name="iban2" maxlength="4" placeholder="XXXX" required
+                    <input type="text" name="iban2" maxlength="4" placeholder="XXXX" 
                       class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light"
                       style="width:80px; text-align:center;">
-                    <input type="text" name="iban3" maxlength="4" placeholder="XXXX" required
+                    <input type="text" name="iban3" maxlength="4" placeholder="XXXX" 
                       class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light"
                       style="width:80px; text-align:center;">
-                    <input type="text" name="iban4" maxlength="2" placeholder="XX" required
+                    <input type="text" name="iban4" maxlength="2" placeholder="XX" 
                       class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light"
                       style="width:50px; text-align:center;">
-                    <input type="text" name="iban5" maxlength="8" placeholder="XXXXXXXX" required
+                    <input type="text" name="iban5" maxlength="8" placeholder="XXXXXXXX" 
                       class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light"
                       style="width:130px; text-align:center;">
                   </div>
@@ -438,12 +445,12 @@
                 <div class="row g-3">
                   <div class="col-sm-12 col-md-6 col-lg-6">
                     <label for="Swift/BIC" class="form-label"></label>
-                    <input type="number" id="swift" placeholder="Swift/BIC" required
+                    <input type="number" id="swift" placeholder="Swift/BIC" 
                       class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-6">
                     <label for="tipoCuenta" class="form-label"></label>
-                    <select id="tipoCuenta" required
+                    <select id="tipoCuenta" 
                       class="form-control rounded-0 bg-black bg-opacity-50 select-blanco fw-bold text-light">
                       <option disabled selected>Tipo de cuenta</option>
                       <option>Corriente</option>
@@ -452,12 +459,13 @@
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-12">
                   <label for="Sucursal" class="form-label"></label>
-                  <input type="text" id="sucursal" placeholder="Sucursal" required
+                  <input type="text" id="sucursal" placeholder="Sucursal" 
                     class="form-control bg-black rounded-0 bg-opacity-50 placeholder input-placeholder-blanco fw-bold text-light">
                 </div>
               </div>
             </div>
 
+            
         </form>
       </div>
     </div>
