@@ -1,0 +1,70 @@
+meta {
+  name: Guardar
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/api/formulario
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "nombre": "Maria",
+    "apellidos": "Fernandez",
+    "fechaNacimiento": "2003-05-21",
+    "genero": "Femenino",
+    "nacionalidad": "Española",
+    "tipoIdentificacion": "DNI",
+    "numeroIdentificacion": "23345678B",
+    "estadoCivil": "Soltero",
+  
+    "contacto": {
+      "telefonoMovil": "600123456",
+      "telefonoFijo": "910111213",
+      "email": "maria@mail.com",
+      "linkedin": "linkedin.com/adrian",
+      "twitter": "twitter.com/adrian",
+      "sitioWebPersonal": "adrian.dev"
+    },
+  
+    "direccion": {
+      "tipoVia": "Calle",
+      "via": "Gran Via",
+      "numero": "45",
+      "piso": "4",
+      "puerta": "B",
+      "tipoVivienda": "piso",
+      "codigoPostal": "28010",
+      "provincia": "Salamanca",
+      "localidad": "Salamanca",
+      "pais": "España"
+    },
+  
+    "productoPrincipal": "Plan Premium",
+    "productosSecundarios": ["Instalación en casa", "Seguro antirrobo"],
+  
+    "metodoPago": {
+      "tipoPago": "Transferencia",
+      "nombreTitular": "Adrián Pérez",
+      "fechaCaducidad": "",
+      "cvv": ""
+    },
+  
+    "datosBancarios": {
+      "nombreBanco": "BBVA",
+      "iban": "ES9820385778983000760238",
+      "swift": "BBVAESMM",
+      "tipoCuenta": "corriente",
+      "sucursal": "Madrid"
+    }
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
